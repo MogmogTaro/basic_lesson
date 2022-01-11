@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { increment } from './features/counter/counterSlice';
 
 export const CleanUp = () => {
   const [currentNum, setCurrentNum] = useState(0);
@@ -14,7 +13,7 @@ export const CleanUp = () => {
     window.addEventListener("mousedown", incrementNum);
     return () => {
       console.log("Cleanup invoked!");
-      window.removeEventListener("mousedown", incrementNum);
+      window.removeEventListener("mousedown", incrementNum)
     }
   })
   return (
